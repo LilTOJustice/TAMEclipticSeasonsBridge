@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  build-and-publish:
     runs-on: ubuntu-latest
     steps:
       - name: Check Environment Variables
