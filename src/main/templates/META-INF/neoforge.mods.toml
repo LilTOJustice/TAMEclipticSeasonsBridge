@@ -26,3 +26,7 @@ side = "BOTH"
 [[dependencies."${mod_id}"]]
 modId = "eclipticseasons"
 type = "required"
+
+[[dependencies."${mod_id}"]]
+modId = "trueadaptivemusic"
+type = "required"
