@@ -2,6 +2,10 @@ name: Publish mod
 
 on:
   push:
+    branches:
+      - 'versions/*.*'
+      - '!versions/*-update-*'
+  workflow_dispatch:
 
 env:
   JAVA_VERSION: 21
