@@ -30,4 +30,4 @@ type = "required"
 [[dependencies."${mod_id}"]]
 modId = "trueadaptivemusicapi"
 type = "required"
-versionRange = "1.2.0"
+versionRange = "1.2.*"

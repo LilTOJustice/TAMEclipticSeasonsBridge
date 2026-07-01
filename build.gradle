@@ -108,7 +108,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 dependencies {
     implementation 'thedarkcolour:kotlinforforge-neoforge:5.3.0'
     implementation "curse.maven:ecliptic-seasons-1118306:7742018"
-    api "curse.maven:trueadaptivemusicapi-1514598:8051437"
+    api "curse.maven:trueadaptivemusicapi-1514598:8333447"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
