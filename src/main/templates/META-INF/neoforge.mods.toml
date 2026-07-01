@@ -28,5 +28,6 @@ modId = "eclipticseasons"
 type = "required"
 
 [[dependencies."${mod_id}"]]
-modId = "trueadaptivemusic"
+modId = "trueadaptivemusicapi"
 type = "required"
+versionRange = "1.2.0"
