@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
     id 'idea'
     id 'net.neoforged.moddev' version '2.0.140'
-    id 'org.jetbrains.kotlin.jvm' version '2.0.0'
+    id 'org.jetbrains.kotlin.jvm' version '2.3.0'
 }
 
 version = mod_version
@@ -108,7 +108,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 dependencies {
     implementation 'thedarkcolour:kotlinforforge-neoforge:5.3.0'
     implementation "curse.maven:ecliptic-seasons-1118306:7742018"
-    implementation "curse.maven:true-adaptive-music-1208639:7741802"
+    api "curse.maven:trueadaptivemusicapi-1514598:8051437"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
