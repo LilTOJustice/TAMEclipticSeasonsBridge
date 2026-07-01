@@ -2,12 +2,18 @@ package liltojustice.tameclipticseasonsbridge
 
 import com.teamtea.eclipticseasons.api.constant.solar.Season
 import com.teamtea.eclipticseasons.api.util.EclipticUtil
-import liltojustice.trueadaptivemusic.client.trigger.predicate.MusicPredicate
+import liltojustice.trueadaptivemusicapi.trigger.arguments.TriggerArguments
+import liltojustice.trueadaptivemusicapi.trigger.predicate.type.StaticPredicateType
 import net.minecraft.client.Minecraft
+import kotlin.reflect.typeOf
 
-class SeasonPredicate(private val season: Season): MusicPredicate() {
-    override fun test(): Boolean {
+object SeasonPredicate: StaticPredicateType<SeasonPredicate.Arguments>(
+    "season", typeOf<Arguments>()
+) {
+    data class Arguments(val season: Season): TriggerArguments()
+
+    override fun test(arguments: Arguments): Boolean {
         val player = Minecraft.getInstance().player ?: return false
-        return EclipticUtil.INSTANCE.getAgroSeason(player.level(), player.blockPosition()) == season
+        return EclipticUtil.INSTANCE.getAgroSeason(player.level(), player.blockPosition()) == arguments.season
     }
 }

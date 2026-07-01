@@ -1,6 +1,6 @@
 package liltojustice.tameclipticseasonsbridge
 
-import liltojustice.trueadaptivemusic.client.TAMClient
+import liltojustice.trueadaptivemusicapi.TAMAPI
 import net.minecraft.client.Minecraft
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
@@ -40,7 +40,7 @@ object TAMEclipticSeasonsBridge {
     }
 
     private fun onClientSetup(event: FMLClientSetupEvent) {
-        TAMClient.registerPredicate("season", SeasonPredicate::class)
+        TAMAPI.registerPredicateType(SeasonPredicate)
     }
 
     private fun onServerSetup(event: FMLDedicatedServerSetupEvent) {
