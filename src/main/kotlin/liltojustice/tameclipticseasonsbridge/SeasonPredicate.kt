@@ -14,6 +14,6 @@ object SeasonPredicate: StaticPredicateType<SeasonPredicate.Arguments>(
 
     override fun test(arguments: Arguments): Boolean {
         val player = Minecraft.getInstance().player ?: return false
-        return EclipticUtil.INSTANCE.getAgroSeason(player.level(), player.blockPosition()) == arguments.season
+        return EclipticUtil.INSTANCE.getSeason(player.level()) == arguments.season
     }
 }
